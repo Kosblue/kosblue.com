@@ -22,8 +22,17 @@
             <a>3e849f2e5c</a>
         </div>
         <div class="content element">
+
+
             <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                Lorem ipsum dolor
+                <a>
+                    <?php
+                    date_default_timezone_set("Europe/Helsinki");
+                    echo date("h:i A");
+                    ?>
+                </a>
+                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
@@ -35,31 +44,31 @@
             <div class="social-media-buttons">
                 <a class="has-tooltip" href="mailto:contact@kosblue.com">
                     <img src="img/social-media/email.png" alt="Email"/>
-                    <span class="tooltip tooltip-extra-large tooltip-left-edge">contact@kosblue.com</span>
+                    <span class="tooltip tooltip-extra-large">contact@kosblue.com</span>
                 </a>
                 <a class="has-tooltip" href="https://twitch.tv/KosblueSoftware">
                     <img src="img/social-media/twitch.png" alt="Twitch"/>
-                    <span class="tooltip tooltip-large tooltip-left-edge">KosblueSoftware</span>
+                    <span class="tooltip tooltip-large">KosblueSoftware</span>
                 </a>
                 <a class="has-tooltip" href="https://x.com/3e849f2e5c">
                     <img src="img/social-media/x.png" alt="X"/>
                     <span class="tooltip tooltip-large">@KosblueSoftware</span>
                 </a>
-                <a class="has-tooltip">
-                    <img src="img/social-media/discord.png" alt="Discord"/>
-                    <span class="tooltip">@3e849f2e5c</span>
+                <a class="has-tooltip" href="https://www.tiktok.com/@KosblueSoftware">
+                    <img src="img/social-media/tiktok.png" alt="TikTok"/>
+                    <span class="tooltip tooltip-large">@KosblueSoftware</span>
                 </a>
                 <a class="has-tooltip" href="https://www.youtube.com/@kosblue">
                     <img src="img/social-media/youtube.png" alt="YouTube"/>
                     <span class="tooltip tooltip-small">@Kosblue</span>
                 </a>
-                <a class="has-tooltip" href="https://www.tiktok.com/@KosblueSoftware">
-                    <img src="img/social-media/tiktok.png" alt="TikTok"/>
-                    <span class="tooltip tooltip-large tooltip-right-edge">@KosblueSoftware</span>
+                <a class="has-tooltip">
+                    <img src="img/social-media/discord.png" alt="Discord"/>
+                    <span class="tooltip">@3e849f2e5c</span>
                 </a>
                 <a class="has-tooltip" href="https://github.com/Kosblue">
                     <img src="img/social-media/github.png" alt="GitHub"/>
-                    <span class="tooltip tooltip-small tooltip-right-edge">Kosblue</span>
+                    <span class="tooltip tooltip-small">Kosblue</span>
                 </a>
             </div>
         </div>
