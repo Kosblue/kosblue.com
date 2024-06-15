@@ -1,0 +1,176 @@
+﻿:root {
+    --color-blue: #55bcd8;
+    --color-red: #e87785;
+    --color-fox: #fcd4ab;
+    --color-dark: #302d42;
+    --color-white: #f1eeff;
+    --color-fg: var(--color-dark);
+    --color-bg: var(--color-white);
+    --border-width: 8px;
+    --double-border: calc(var(--border-width) * 2);
+
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/bg.jpg") no-repeat fixed center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/*
+Tint for the background
+ */
+body::after {
+    z-index: -1;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--color-bg);
+    opacity: 90%;
+}
+
+.main {
+    vertical-align: center;
+    border: var(--border-width) dashed var(--color-blue);
+    height: 800px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sub-container {
+    --margin: 16px;
+    --double-margin: calc(var(--margin) * 2);
+
+    margin: var(--margin);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - var(--double-margin));
+    height: calc(100% - var(--double-margin));
+}
+
+.element {
+    color: var(--color-fg);
+    display: flex;
+    border: var(--color-blue) var(--border-width) solid;
+    width: calc(100% - var(--double-border));
+    background-color: var(--color-bg);
+}
+
+.header {
+    height: calc(10% - var(--double-border));
+    overflow-x: clip;
+}
+
+.header > a {
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: calc(20% - var(--double-border));
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 50%));
+}
+
+.logo > img {
+    object-fit: contain;
+    display: block;
+    max-width: 100%;
+}
+
+.content {
+    height: calc(50% - var(--double-border));
+    overflow-y: auto;
+}
+
+.content > a {
+    margin: 8px;
+}
+
+.footer {
+    height: calc(15% - var(--double-border));
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.footer-disclaimer {
+    text-align: center;
+    height: 30%;
+}
+
+.social-media-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+}
+
+.social-media-buttons > a {
+    height: calc(100% - 16px);
+    margin: 0 4px;
+}
+
+.social-media-buttons > a > img {
+    height: 100%;
+}
+
+a:link {
+    color: var(--color-red);
+}
+
+a:visited {
+    color: var(--color-red);
+}
+
+.has-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.has-tooltip .tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: var(--color-white);
+    text-align: center;
+    padding: 4px;
+    border-radius: 8px;
+
+    position: absolute;
+    z-index: 1;
+
+    --width: 150px;
+    width: var(--width);
+    bottom: 100%;
+    left: 50%;
+    margin-left: calc(var(--width) * -0.5);
+}
+
+.has-tooltip:hover .tooltip {
+    visibility: visible;
+}
