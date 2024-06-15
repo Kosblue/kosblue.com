@@ -8,6 +8,7 @@
     --color-bg: var(--color-white);
     --border-width: 8px;
     --double-border: calc(var(--border-width) * 2);
+    --page-width: 600px;
 
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
@@ -45,7 +46,7 @@ body::after {
     vertical-align: center;
     border: var(--border-width) dashed var(--color-blue);
     height: 800px;
-    width: 600px;
+    width: var(--page-width);
     margin-left: auto;
     margin-right: auto;
 }
@@ -95,6 +96,7 @@ body::after {
     object-fit: contain;
     display: block;
     max-width: 100%;
+    content: url("../img/logo.webp")
 }
 
 .content {
@@ -112,16 +114,10 @@ body::after {
     flex-direction: column;
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-}
-
-.footer-disclaimer {
+.footer-text {
     text-align: center;
     height: 30%;
+    margin-top: 4px;
 }
 
 .social-media-buttons {
@@ -132,7 +128,7 @@ body::after {
 }
 
 .social-media-buttons > a {
-    height: calc(100% - 16px);
+    height: 48px;
     margin: 0 4px;
 }
 
@@ -154,23 +150,66 @@ a:visited {
 }
 
 .has-tooltip .tooltip {
+    --width: 150px;
+    --padding: 8px;
+
     visibility: hidden;
     background-color: black;
     color: var(--color-white);
     text-align: center;
-    padding: 4px;
+    padding: var(--padding);
     border-radius: 8px;
 
     position: absolute;
     z-index: 1;
 
-    --width: 150px;
     width: var(--width);
     bottom: 100%;
     left: 50%;
-    margin-left: calc(var(--width) * -0.5);
+    margin-left: calc((var(--width) + (var(--padding) * 2)) * -0.5);
+}
+
+.has-tooltip .tooltip-large {
+    --width: 210px;
+}
+
+.has-tooltip .tooltip-extra-large {
+     --width: 250px;
+}
+
+.has-tooltip .tooltip-small {
+    --width: 110px;
 }
 
 .has-tooltip:hover .tooltip {
     visibility: visible;
+}
+
+@media (max-width: 400px) {
+    .logo > img {
+        content: url("../img/logo_compact.webp")
+    }
+}
+
+@media (max-width: 449px) {
+    .social-media-buttons > a {
+        height: 32px;
+    }
+}
+
+/* var(--page-width) */
+@media (max-width: 616px) {
+    .main {
+        border: none;
+    }
+}
+
+@media (max-height: 800px) {
+    body {
+        justify-content: unset;
+        align-items: unset;
+    }
+    .main {
+        border: none;
+    }
 }
