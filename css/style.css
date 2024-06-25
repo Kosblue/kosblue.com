@@ -185,6 +185,17 @@ a:visited {
     visibility: visible;
 }
 
+.has-tooltip .tooltip-bottom {
+    bottom: unset;
+    top: 100%;
+    left: 50%;
+}
+
+.hoverable {
+    text-decoration:underline;
+    color: var(--color-red);
+}
+
 @media (max-width: 400px) {
     .logo > img {
         content: url("../img/logo_compact.webp")
