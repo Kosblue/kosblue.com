@@ -20,7 +20,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../img/bg.jpg") no-repeat fixed center;
+    background: linear-gradient(
+            rgba(241, 238, 255, 0.9),
+            rgba(241, 238, 255, 0.9)
+    ), url("../img/bg.jpg") no-repeat fixed center;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -31,6 +34,8 @@ body {
 Tint for the background
  */
 body::after {
+    display: none;
+    margin: 0;
     z-index: -1;
     content: '';
     left: 0;
@@ -104,8 +109,9 @@ body::after {
     overflow-y: auto;
 }
 
-.content > span {
+.content > .content-body {
     margin: 8px;
+    overflow: clip;
 }
 
 .footer {
@@ -205,6 +211,10 @@ a:visited {
 @media (max-width: 449px) {
     .social-media-buttons > a {
         height: 32px;
+    }
+
+    .content-body {
+        font-size: 20px;
     }
 }
 

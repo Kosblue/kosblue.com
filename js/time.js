@@ -1,7 +1,7 @@
 ﻿const utcHour1 = 22;
 const utcHour2 = 14;
 
-window.onload = () => {
+window.addEventListener("load", () => {
     const yourTime = document.getElementById("your-time");
     if (yourTime === null) {
         return;
@@ -23,4 +23,4 @@ window.onload = () => {
     const minuteFormat = minute.toString().padStart(2, "0");
 
     yourTime.innerText = `${hour1}:${minuteFormat}-${hour2}:${minuteFormat} your time`;
-};
+});
